@@ -16,10 +16,12 @@ const Navigation = ({ user, onLogout }) => {
     { path: '/receive', label: 'Receive' },
     { path: '/transactions', label: 'Transactions' },
     { path: '/proof', label: 'Proof' },
+    { path: '/token-sale', label: 'Token Sale' },
   ] : [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/how-it-works', label: 'How It Works' },
+    { path: '/token-sale', label: 'Token Sale' },
   ];
 
   return (
