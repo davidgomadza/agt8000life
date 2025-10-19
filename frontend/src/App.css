@@ -1,34 +1,77 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
 }
 
-.App-link {
-    color: #61dafb;
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.sparkle:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.sparkle:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.sparkle:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #188ade 0%, #fff 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(24, 138, 222, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1b4b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #188ade;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a5f8f;
 }
