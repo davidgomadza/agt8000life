@@ -94,7 +94,7 @@ const LandingPage = ({ user, onLogout }) => {
             {
               title: 'Unlimited Lifespan',
               description: 'Live on Earth forever with 8000+ years extension',
-              icon: '♾️',
+              icon: '♾',
               testId: 'feature-lifespan'
             }
           ].map((feature, index) => (
