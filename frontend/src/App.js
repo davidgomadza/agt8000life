@@ -14,6 +14,7 @@ import TransactionsPage from './pages/TransactionsPage';
 import ProofPage from './pages/ProofPage';
 import AboutPage from './pages/AboutPage';
 import HowItWorksPage from './pages/HowItWorksPage';
+import TokenSalePage from './pages/TokenSalePage';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
