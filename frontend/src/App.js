@@ -57,6 +57,7 @@ function App() {
         <Route path="/auth" element={user ? <Navigate to="/wallet" /> : <AuthPage onLogin={handleLogin} />} />
         <Route path="/about" element={<AboutPage user={user} onLogout={handleLogout} />} />
         <Route path="/how-it-works" element={<HowItWorksPage user={user} onLogout={handleLogout} />} />
+        <Route path="/token-sale" element={<TokenSalePage user={user} onLogout={handleLogout} />} />
         <Route 
           path="/wallet" 
           element={user ? <WalletPage user={user} onLogout={handleLogout} /> : <Navigate to="/auth" />} 
