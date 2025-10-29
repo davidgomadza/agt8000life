@@ -1,0 +1,184 @@
+"<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>AGT Platform - Advanced GeneticSynthesis Technology</title>
+    <meta name=\"description\" content=\"Live on Earth Forever. Extend your life up to 8000+ years with AGT.\">
+    <script src=\"https://cdn.tailwindcss.com\"></script>
+    <style>
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.05); }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        .bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
+        .sparkle { animation: sparkle 2s ease-in-out infinite; }
+        .sparkle:nth-child(1) { animation-delay: 0s; }
+        .sparkle:nth-child(2) { animation-delay: 0.5s; }
+        .sparkle:nth-child(3) { animation-delay: 1s; }
+        .sparkle:nth-child(4) { animation-delay: 1.5s; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(24, 138, 222, 0.3); }
+    </style>
+</head>
+<body class=\"bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 min-h-screen\">
+    <!-- Navigation -->
+    <nav class=\"bg-purple-900/80 backdrop-blur-md border-b border-purple-700\">
+        <div class=\"container mx-auto px-4\">
+            <div class=\"flex items-center justify-between h-20\">
+                <a href=\"index.html\" class=\"flex items-center space-x-3\">
+                    <div class=\"w-12 h-12 relative bounce-slow\">
+                        <svg width=\"100%\" height=\"100%\" viewBox=\"0 0 100 100\">
+                            <defs>
+                                <linearGradient id=\"diamondGradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">
+                                    <stop offset=\"0%\" style=\"stop-color:#188ade;stop-opacity:1\" />
+                                    <stop offset=\"50%\" style=\"stop-color:#6366f1;stop-opacity:1\" />
+                                    <stop offset=\"100%\" style=\"stop-color:#8b5cf6;stop-opacity:1\" />
+                                </linearGradient>
+                            </defs>
+                            <polygon points=\"50,5 95,50 50,95 5,50\" fill=\"url(#diamondGradient)\" stroke=\"white\" stroke-width=\"2\"/>
+                        </svg>
+                        <div class=\"absolute inset-0 flex items-center justify-center text-sm font-bold text-white\">AGT</div>
+                    </div>
+                    <span class=\"text-white font-bold text-xl\">AGT Platform</span>
+                </a>
+                <div class=\"hidden md:flex items-center space-x-6\">
+                    <a href=\"index.html\" class=\"text-blue-400 text-sm font-medium\">Home</a>
+                    <a href=\"about.html\" class=\"text-gray-300 hover:text-white text-sm font-medium\">About</a>
+                    <a href=\"how-it-works.html\" class=\"text-gray-300 hover:text-white text-sm font-medium\">How It Works</a>
+                    <a href=\"token-sale.html\" class=\"text-gray-300 hover:text-white text-sm font-medium\">Token Sale</a>
+                    <a href=\"#contact\" class=\"px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors\">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class=\"container mx-auto px-4 py-20\">
+        <div class=\"text-center\">
+            <div class=\"flex justify-center mb-8\">
+                <div class=\"w-40 h-40 relative bounce-slow\">
+                    <svg width=\"100%\" height=\"100%\" viewBox=\"0 0 100 100\">
+                        <defs>
+                            <linearGradient id=\"heroGradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">
+                                <stop offset=\"0%\" style=\"stop-color:#188ade;stop-opacity:1\" />
+                                <stop offset=\"50%\" style=\"stop-color:#6366f1;stop-opacity:1\" />
+                                <stop offset=\"100%\" style=\"stop-color:#8b5cf6;stop-opacity:1\" />
+                            </linearGradient>
+                        </defs>
+                        <polygon points=\"50,5 95,50 50,95 5,50\" fill=\"url(#heroGradient)\" stroke=\"white\" stroke-width=\"2\"/>
+                    </svg>
+                    <div class=\"absolute inset-0 flex items-center justify-center text-5xl font-bold text-white\">AGT</div>
+                    <div class=\"sparkle absolute top-0 left-1/4 w-2 h-2 bg-yellow-400 rounded-full\"></div>
+                    <div class=\"sparkle absolute top-1/4 right-0 w-2 h-2 bg-yellow-400 rounded-full\"></div>
+                    <div class=\"sparkle absolute bottom-0 right-1/4 w-2 h-2 bg-yellow-400 rounded-full\"></div>
+                    <div class=\"sparkle absolute bottom-1/4 left-0 w-2 h-2 bg-yellow-400 rounded-full\"></div>
+                </div>
+            </div>
+            <h1 class=\"text-5xl md:text-7xl font-bold text-white mb-6\">
+                Advanced GeneticSynthesis<br>
+                <span class=\"bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\">Technology</span>
+            </h1>
+            <p class=\"text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto\">
+                Unlock the power to extend your life from 1 year to 8000+ years. 
+                AGT removes death forever through revolutionary genetic synthesis.
+            </p>
+            <div class=\"flex flex-col sm:flex-row gap-4 justify-center items-center\">
+                <a href=\"#contact\" class=\"px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg\">
+                    Get Started
+                </a>
+                <a href=\"about.html\" class=\"px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-lg text-lg font-semibold transition-all backdrop-blur-sm\">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class=\"container mx-auto px-4 py-16\">
+        <div class=\"grid grid-cols-1 md:grid-cols-3 gap-8\">
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-8 text-center card-hover\">
+                <div class=\"text-5xl font-bold text-blue-400 mb-2\">8000+</div>
+                <div class=\"text-xl text-white\">Maximum Years Extension</div>
+            </div>
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-8 text-center card-hover\">
+                <div class=\"text-5xl font-bold text-purple-400 mb-2\">2</div>
+                <div class=\"text-xl text-white\">Types AGT Coins Available</div>
+            </div>
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-8 text-center card-hover\">
+                <div class=\"text-5xl font-bold text-green-400 mb-2\">100%</div>
+                <div class=\"text-xl text-white\">Death Prevention Rate</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class=\"container mx-auto px-4 py-16\">
+        <h2 class=\"text-4xl font-bold text-white text-center mb-12\">Why Choose AGT?</h2>
+        <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6\">
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-6 card-hover\">
+                <div class=\"text-4xl mb-4\">🧬</div>
+                <h3 class=\"text-xl font-semibold text-white mb-2\">Revolutionary Technology</h3>
+                <p class=\"text-gray-300\">Breakthrough genetic synthesis at cellular level</p>
+            </div>
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-6 card-hover\">
+                <div class=\"text-4xl mb-4\">🔐</div>
+                <h3 class=\"text-xl font-semibold text-white mb-2\">Blockchain Security</h3>
+                <p class=\"text-gray-300\">Military-grade encryption protects your AGT tokens</p>
+            </div>
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-6 card-hover\">
+                <div class=\"text-4xl mb-4\">⚡</div>
+                <h3 class=\"text-xl font-semibold text-white mb-2\">Instant Activation</h3>
+                <p class=\"text-gray-300\">Quick verification and immediate life extension</p>
+            </div>
+            <div class=\"bg-white/10 backdrop-blur-md rounded-xl p-6 card-hover\">
+                <div class=\"text-4xl mb-4\">♾</div>
+                <h3 class=\"text-xl font-semibold text-white mb-2\">Unlimited Lifespan</h3>
+                <p class=\"text-gray-300\">Live on Earth forever with 8000+ years extension</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class=\"container mx-auto px-4 py-20\">
+        <div class=\"bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center\">
+            <h2 class=\"text-4xl font-bold text-white mb-4\">Ready to Begin Your Journey?</h2>
+            <p class=\"text-xl text-gray-100 mb-8\">Join thousands who have already chosen eternal life</p>
+            <a href=\"#contact\" class=\"inline-block px-10 py-4 bg-white text-purple-600 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg\">
+                Get Started Today
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id=\"contact\" class=\"container mx-auto px-4 py-20\">
+        <div class=\"max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-xl p-8\">
+            <h2 class=\"text-3xl font-bold text-white text-center mb-6\">Contact Us</h2>
+            <div class=\"space-y-4 text-gray-200\">
+                <p class=\"text-center\"><strong class=\"text-blue-400\">PayPal:</strong> davidgomadza@hotmail.com</p>
+                <p class=\"text-center\"><strong class=\"text-blue-400\">Email:</strong> btcyt@bitcoinayt.world</p>
+                <p class=\"text-center\"><strong class=\"text-blue-400\">Phone:</strong> 00447719210295</p>
+                <p class=\"text-center\"><strong class=\"text-blue-400\">Crypto Address:</strong></p>
+                <p class=\"text-center text-sm font-mono bg-black/30 p-3 rounded break-all\">0xe9EC891eAD0E2a4bd3B14f86B9B4aB8eFD1d5180</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class=\"bg-purple-950 border-t border-purple-800 py-8\">
+        <div class=\"container mx-auto px-4 text-center text-gray-400\">
+            <p class=\"mb-2\">&copy; 2025 AGT Platform - Advanced GeneticSynthesis Technology</p>
+            <p class=\"text-sm\">Optimism Contract: 0x9427A2a738AffBc5880F0646b5251069c022e525</p>
+            <p class=\"text-sm\">Payment Address: 0xe9EC891eAD0E2a4bd3B14f86B9B4aB8eFD1d5180</p>
+            <div class=\"mt-4 space-x-4\">
+                <a href=\"https://bitcoinayt.world\" target=\"_blank\" class=\"hover:text-blue-400 transition-colors\">BitcoinAYT</a>
+                <a href=\"https://twofuture.world\" target=\"_blank\" class=\"hover:text-blue-400 transition-colors\">TwoFuture</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
