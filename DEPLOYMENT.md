@@ -1,0 +1,138 @@
+# AGT Platform - Deployment Guide for GitHub Pages
+
+## Quick Deploy to GitHub Pages
+
+### Option 1: Deploy from `/app/frontend/build` directory
+
+1. **Push the build folder to GitHub:**
+   ```bash
+   cd /app/frontend/build
+   git init
+   git add .
+   git commit -m "Deploy AGT Platform to GitHub Pages"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Save
+
+3. **Wait for deployment:**
+   - GitHub will automatically build and deploy
+   - Your site will be live at: `https://YOUR-USERNAME.github.io/YOUR-REPO/`
+
+### Option 2: Deploy Static HTML Version
+
+For a simpler deployment without React routing issues, use the static HTML version:
+
+1. **Use the static HTML files:**
+   ```bash
+   cd /app/static-html
+   git init
+   git add .
+   git commit -m "Deploy static AGT Platform"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages** (same as above)
+
+### Fixing 404 Errors on GitHub Pages
+
+The build folder already includes:
+- ✅ `404.html` - Handles client-side routing redirects
+- ✅ `.nojekyll` - Prevents Jekyll processing
+- ✅ Redirect script in `index.html` - Manages URL rewriting
+
+### Important Files Included
+
+1. **404.html**: Redirects all routes to index.html for React Router
+2. **.nojekyll**: Tells GitHub Pages not to use Jekyll
+3. **index.html**: Updated with redirect handling script
+
+### Custom Domain (Optional)
+
+To use a custom domain:
+
+1. Add a `CNAME` file to the build directory:
+   ```bash
+   echo "yourdomain.com" > /app/frontend/build/CNAME
+   ```
+
+2. Update your domain's DNS settings:
+   - Add an A record pointing to GitHub's IPs:
+     - 185.199.108.153
+     - 185.199.109.153
+     - 185.199.110.153
+     - 185.199.111.153
+   - Or add a CNAME record pointing to: YOUR-USERNAME.github.io
+
+3. In repository settings, add your custom domain under Pages settings
+
+### Troubleshooting 404 Errors
+
+If you still get 404 errors:
+
+1. **Check repository name**: 
+   - For user pages: Must be `USERNAME.github.io`
+   - For project pages: Any name works
+
+2. **Update package.json homepage**:
+   ```json
+   {
+     "homepage": "https://USERNAME.github.io/REPO-NAME"
+   }
+   ```
+   Then rebuild: `cd /app/frontend && yarn build`
+
+3. **Verify GitHub Pages settings**:
+   - Ensure "Source" is set correctly
+   - Check "Custom domain" if using one
+   - Verify HTTPS is enforced
+
+4. **Clear browser cache** or try incognito mode
+
+5. **Check deployment status**:
+   - Go to Actions tab in your repository
+   - Verify the deployment completed successfully
+
+### Backend API Note
+
+⚠️ **Important**: The React build is configured for a backend API. For GitHub Pages (static hosting):
+
+1. The backend won't work on GitHub Pages (it's frontend-only)
+2. You'll need to:
+   - Deploy backend separately (Heroku, Railway, Vercel, AWS, etc.)
+   - Update `REACT_APP_BACKEND_URL` in `.env` to point to your deployed backend
+   - Rebuild: `yarn build`
+
+3. Or use the static HTML version in `/app/static-html` which doesn't require a backend
+
+### Contact Integration
+
+The static version includes PayPal and contact information:
+- PayPal: davidgomadza@hotmail.com
+- Email: btcyt@bitcoinayt.world
+- Phone: 00447719210295
+- Crypto: 0xe9EC891eAD0E2a4bd3B14f86B9B4aB8eFD1d5180
+
+## Directory Structure
+
+```
+/app/frontend/build/     - React production build (with backend API)
+/app/static-html/        - Pure HTML version (no backend needed)
+```
+
+## Need Help?
+
+If you encounter issues:
+1. Check GitHub Pages documentation: https://pages.github.com/
+2. Verify all files are committed and pushed
+3. Check browser console for errors
+4. Review GitHub Actions logs for deployment errors
